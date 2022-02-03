@@ -1,0 +1,67 @@
+.container{
+  width: 600px;
+  height: 400px;
+  background-color: gray;
+}
+
+.bar{
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  padding: 25px;
+}
+
+p {
+  margin-top: -15px;
+  font-size: 12px;
+}
+
+#bar_1{
+  width: 229.4px;
+  height: 20px;
+  background-color: red;
+}
+
+#bar_1:hover{
+  background-color: darkred;
+}
+
+#bar_2{
+  width: 168.6px;
+  height: 20px;
+  background-color: blue;
+}
+
+#bar_2:hover{
+  background-color: darkblue;
+}
+
+#bar_3{
+  width: 51.0px;
+  height: 20px;
+  background-color: yellow;
+}
+
+#bar_3:hover{
+  background-color: orange;
+}
+
+#bar_4{
+  width: 42.3px;
+  height: 20px;  
+  background-color: green;
+}
+
+#bar_4:hover{
+  background-color: darkgreen;
+}
+
+#bar_5{
+  width: 31.1px;
+  height: 20px;
+  background-color: white;
+}
+
+#bar_5:hover{
+  background-color: lightgray;
+}
