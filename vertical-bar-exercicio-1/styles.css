@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Rubik|Signika');
+
+* {
+	box-sizing: none;
+	font-family: 'Lato', 'Rubik', 'Signika', Helvetica, sans-serif;
+	margin: 0;
+}
+
+body{
+  width: 600px;
+  height: 400px;
+}
+
+#title_box {
+  align-items: center;
+  font-size: 14px;
+}
+
+#title_box span{
+  font-size: 12px;
+}
+
+.container{
+  padding: 25px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar{
+  height: 200px;
+  margin-left: 20px;
+}
+
+.bar_text{
+  padding-top: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-size: 12px;
+}
+
+.bar_title{
+  text-weight: 800px;
+}
+
+/* first bar */
+#bar_1{
+  background-image: linear-gradient(#403c6c, #b82434, white);
+  width: 229.4%;
+}
+
+#bar_1:hover{
+  background-image: linear-gradient(#b82434, white, #403c6c);
+}
+
+/* second bar */
+#bar_2{
+  background-image: linear-gradient(#e02c0c, #ffdc04);
+  width: 168.6%;
+}
+
+#bar_2:hover{
+  background-image: linear-gradient(#ffdc04, #e02c0c);
+}
+
+/* third bar */
+#bar_3{
+  background-image: linear-gradient(#c0042c, white);
+  width: 51%;
+}
+
+#bar_3:hover{
+  background-image: linear-gradient(white, #c0042c);
+}
+
+
+/* fourth bar */
+#bar_4{
+  background-image: linear-gradient(#080404, #e00404, #ffcc04);
+  width: 51%;
+}
+
+#bar_4:hover{
+  background-image: linear-gradient(#ffcc04, #e00404, #080404);
+}
+
+
+/* fifth bar */
+#bar_5{
+  background-image: linear-gradient(#081c6c, #d0042c, white);
+  width: 31%;
+}
+
+#bar_5:hover{
+  background-image: linear-gradient(#d0042c, white, #081c6c);
+}
+
+footer p a {
+  color: #2074d4;
+  text-decoration: none;
+}
