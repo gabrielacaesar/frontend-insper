@@ -79,7 +79,7 @@ body{
 /* fourth bar */
 #bar_4{
   background-image: linear-gradient(#080404, #e00404, #ffcc04);
-  width: 51%;
+  width: 42%;
 }
 
 #bar_4:hover{
