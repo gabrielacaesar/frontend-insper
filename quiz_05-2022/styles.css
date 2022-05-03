@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&family=Public+Sans:wght@300;600;900&display=swap');
+
+* {
+	font-family: 'Outfit', sans-serif;
+	margin: 0 auto;
+}
+
+body {
+	max-width: 1280px;
+}
+
+a {
+	color: blue;
+}
+
+h1 {
+	font-family: 'Public Sans', sans-serif;
+	padding: 30px 0px;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+li:hover {
+	background-color: pink;
+}
+
+.quiz {
+	max-width: 60%;
+	max-height: 100vh;
+}
+
+.option {
+	max-width: 120px;
+	height: 120px;
+	background-color: gray;
+	margin-top: 15px;
+	border-radius: 1%;
+	justify-content: space-between; 
+}
+
+.option:not(:first-child) {
+	margin-left: 10px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.question {
+	padding-left: 50px;
+}
+
+.answer {
+	display: none;
+}
+
+.result {
+	max-width: 50%;
+	height: 40px;
+	margin-top: 20px;
+	color: white;
+	font-weight: 800;
+	border-radius: 1%;
+}
+
+.text-answer {
+	max-width: 60%;
+	margin-top: 30px;
+}
+
+.credit {
+	max-width: 30%;
+	margin-top: 30px;
+}
+
+.chart {
+	display: none;
+	width: 500px;
+	height: 250px;
+}
+
+.chart > img {
+	max-width: 60%;
+	height: auto;
+	margin-top: 30px;
+}
