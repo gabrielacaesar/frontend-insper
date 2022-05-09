@@ -3,6 +3,7 @@
 * {
 	font-family: 'Outfit', sans-serif;
 	margin: 0 auto;
+	background-color: #1f1f1f;
 }
 
 body {
@@ -10,7 +11,12 @@ body {
 }
 
 a {
-	color: blue;
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1a8cd7;
 }
 
 h1 {
@@ -18,13 +24,27 @@ h1 {
 	padding: 30px 0px;
 }
 
+h1, h2, h3 {
+	color: #e3e3e3;
+}
+
+h3 {
+	padding-top: 20px;
+}
+
 ul {
 	list-style-type: none;
 	padding-left: 0px;
+	color: #1f1f1f;
 }
 
 li:hover {
-	background-color: pink;
+	background-color: #032cdb;
+	color: white;
+}
+
+footer {
+	padding-top: 20px;
 }
 
 .quiz {
@@ -32,17 +52,35 @@ li:hover {
 	max-height: 100vh;
 }
 
-.option {
-	max-width: 120px;
-	height: 120px;
-	background-color: gray;
-	margin-top: 15px;
-	border-radius: 1%;
-	justify-content: space-between; 
+.question-list {
+	max-width: 60%;
+	width: 100%;
+	max-height: 10vh;
+	color: #1f1f1f;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
 }
 
-.option:not(:first-child) {
-	margin-left: 10px;
+.option {
+	max-width: 100%;
+	width: 100%;
+	height: 50px;
+	background-color: #79f830;
+	margin-top: 15px;
+	border-radius: 1%;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.question-option {
+	max-width: 100%;
+	width: 100%;
+	height: 30px;
+	background-color: #faae00;
+	border-radius: 50%;
+	justify-content: space-between;
+	margin: 10px 10px;
 }
 
 .flex {
@@ -59,25 +97,34 @@ li:hover {
 
 .answer {
 	display: none;
+	padding-left: 50px;
 }
 
 .result {
-	max-width: 50%;
+	max-width: 40%;
 	height: 40px;
 	margin-top: 20px;
 	color: white;
-	font-weight: 800;
 	border-radius: 1%;
 }
 
 .text-answer {
 	max-width: 60%;
 	margin-top: 30px;
+	color: white;
 }
 
 .credit {
 	max-width: 30%;
 	margin-top: 30px;
+	color: white;
+}
+
+.italic {
+	max-width: 30%;
+	font-style: italic;
+	margin-top: 10px;
+	color: white;
 }
 
 .chart {
@@ -87,7 +134,21 @@ li:hover {
 }
 
 .chart > img {
-	max-width: 60%;
+	max-width: 100%;
 	height: auto;
 	margin-top: 30px;
+}
+
+.orange {
+	font-weight: 800;
+	color: #faae00;
+}
+
+.news-list {
+	max-width: 100%;
+}
+
+.news {
+	padding: 10px;
+	text-decoration: none;
 }

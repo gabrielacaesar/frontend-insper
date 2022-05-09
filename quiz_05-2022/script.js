@@ -32,7 +32,7 @@ function checkAnswer(event) {
   } else {
 
   // define o texto de 'result' para esta condição
-    result.textContent = 'Resposta errada';
+    result.textContent = 'Resposta errada!';
 
   // define estilo de 'result' para esta condição
     result.style.backgroundColor = 'red';
