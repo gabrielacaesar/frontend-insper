@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&family=Public+Sans:wght@300;600;900&display=swap');
+
+* {
+	margin: 0;
+	font-family: 'Outfit', sans-serif;
+}
+
+/* general properties for tags */
+
+section {
+	height: 100vh;
+	width: 100vw;
+	opacity: 85%;
+}
+
+h1, h2, h3, h4, h5 {
+	z-index: 666;
+	text-align: center;
+}
+
+/* text box */
+
+.box-h1, .box-h3 {
+	width: 100%;
+	height: 70%;
+	justify-content: start;
+	padding-top: 8%;
+}
+
+.box-h2 {
+	width: 100%;
+	height: 10%;
+	justify-content: center;
+}
+
+/* font size and style */ 
+
+h1, h3 {
+	font-size: 50px;
+}
+
+h2, h4 {
+	font-size: 30px;
+}
+
+.round-year {
+	font-size: 30px;
+}
+
+.font-style {
+	background-color: black;
+	opacity: 80%;
+	color: white;
+	padding: 0px 10px;
+}
+
+/* background images style and img */
+
+.tela-v1, .tela-v2, .tela-v3 {
+	z-index: 665;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.tela-v1 {
+	background-image: url("img/estado-sp.png");
+}
+
+.tela-v2 {
+	background-image: url("img/estado-sp-2.png");
+}
+
+.tela-v3 {
+	background-image: url("img/capital-sp.png");
+}
+
+/* flex properties */
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+
+
+
+
