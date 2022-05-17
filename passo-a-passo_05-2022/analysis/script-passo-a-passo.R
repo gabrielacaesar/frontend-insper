@@ -20,6 +20,9 @@ eleitores_sp <- eleitores %>%
   filter(SG_UF == "SP") %>%
   select(CD_MUNICIPIO, QTD_ELEITORES)
 
+# contagem municipios com 200 k
+eleitores_sp %>% filter(QTD_ELEITORES >= 200000) %>% count()
+
 # analise / 1 turno de 2018
 sp_dados <- dados %>%
   filter(SG_UF == "SP" & NR_TURNO == 1) %>%
@@ -31,9 +34,30 @@ sp_dados <- dados %>%
   left_join(eleitores_sp, by = "CD_MUNICIPIO") %>%
   select(-CD_MUNICIPIO) %>%
   mutate(faixa_eleitores = case_when(QTD_ELEITORES >= 200000 ~ "Acima de 200 mil",
-                                     TRUE ~ "Abaixo de 200 mil")) %>%
-  write_rds(., "sp_dados.rds")
+                                     TRUE ~ "Abaixo de 200 mil"))
   
+# resultado no estado de SP / 1 turno
+
+sp_estado <- dados %>% 
+  filter(SG_UF == "SP" & NR_TURNO == 1) %>%
+  filter(!NM_VOTAVEL %in% c("VOTO BRANCO", "VOTO NULO")) %>%
+  group_by(NM_VOTAVEL) %>%
+  summarise(total_votos = sum(QT_VOTOS)) %>%
+  mutate(perc = round(total_votos / sum(total_votos), 4) * 100) %>%
+  write.csv(., "sp-dados_1turno_estado-SP.csv", row.names = F)
+  
+  
+# resultado no estado de SP / 2 turno
+
+sp_estado_2turno <- dados %>% 
+  filter(SG_UF == "SP" & NR_TURNO == 2) %>%
+  filter(!NM_VOTAVEL %in% c("VOTO BRANCO", "VOTO NULO")) %>%
+  group_by(NM_VOTAVEL) %>%
+  summarise(total_votos = sum(QT_VOTOS)) %>%
+  mutate(perc = round(total_votos / sum(total_votos), 4) * 100) %>%
+  write.csv(., "sp-dados_2turno_estado-SP.csv", row.names = F)
+
+##################
 # cidade pro bolsonaro - geral (inclui municipios pequenos)
 sp_dados %>% 
   filter(NM_VOTAVEL == "JAIR MESSIAS BOLSONARO") %>%
@@ -76,7 +100,7 @@ sp_dados %>%
   arrange(desc(`JAIR MESSIAS BOLSONARO`)) %>%
   write.csv(., "sp-dados_1turno_200k_pro-Bolsonaro.csv", row.names = F)
 
-
+###
 # cidade anti bolsonaro - geral (inclui municipios pequenos)
 sp_dados %>% 
   filter(NM_VOTAVEL == "JAIR MESSIAS BOLSONARO") %>%
@@ -116,7 +140,7 @@ sp_dados %>%
   write.csv(., "sp-dados_1turno_200k_anti-Bolsonaro.csv", row.names = F)
 
 
-###########
+##################
 # analise / 2 turno de 2018
 sp_dados_2turno <- dados %>%
   filter(SG_UF == "SP" & NR_TURNO == 2) %>%
@@ -128,8 +152,7 @@ sp_dados_2turno <- dados %>%
   left_join(eleitores_sp, by = "CD_MUNICIPIO") %>%
   select(-CD_MUNICIPIO) %>%
   mutate(faixa_eleitores = case_when(QTD_ELEITORES >= 200000 ~ "Acima de 200 mil",
-                                     TRUE ~ "Abaixo de 200 mil")) %>%
-  write_rds(., "sp_dados_2turno.rds")
+                                     TRUE ~ "Abaixo de 200 mil"))
 
 # cidade pro bolsonaro - geral (inclui municipios pequenos)
 sp_dados_2turno %>% 
@@ -170,6 +193,7 @@ sp_dados_2turno %>%
   arrange(desc(`JAIR MESSIAS BOLSONARO`)) %>%
   write.csv(., "sp-dados_2turno_200k_pro-Bolsonaro.csv", row.names = F)
 
+###
 # cidade anti bolsonaro - geral (inclui municipios pequenos)
 sp_dados_2turno %>% 
   filter(NM_VOTAVEL == "JAIR MESSIAS BOLSONARO") %>%
