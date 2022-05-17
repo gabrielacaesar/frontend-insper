@@ -23,6 +23,18 @@ eleitores_sp <- eleitores %>%
 # contagem municipios com 200 k
 eleitores_sp %>% filter(QTD_ELEITORES >= 200000) %>% count()
 
+# contagem votos / 1 turno
+dados %>% filter(SG_UF == "SP" & NR_TURNO == 1) %>% summarise(sum(QT_VOTOS))
+
+# contagem votos *validos* / 1 turno 
+dados %>% filter(SG_UF == "SP" & NR_TURNO == 1) %>% filter(!NM_VOTAVEL %in% c("VOTO BRANCO", "VOTO NULO")) %>% summarise(sum(QT_VOTOS))
+
+# contagem votos / 2 turno
+dados %>% filter(SG_UF == "SP" & NR_TURNO == 2) %>% summarise(sum(QT_VOTOS))
+
+# contagem votos *validos* / 2 turno 
+dados %>% filter(SG_UF == "SP" & NR_TURNO == 2) %>% filter(!NM_VOTAVEL %in% c("VOTO BRANCO", "VOTO NULO")) %>% summarise(sum(QT_VOTOS))
+
 # analise / 1 turno de 2018
 sp_dados <- dados %>%
   filter(SG_UF == "SP" & NR_TURNO == 1) %>%
