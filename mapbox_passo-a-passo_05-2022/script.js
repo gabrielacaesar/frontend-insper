@@ -68,18 +68,19 @@ function escutaScroll(event){
         // Para cada um deles, pegar a posição atual
         let posicao = gatilho.getBoundingClientRect();
         // Para cada um deles, pegar o valor da propriedade data-alvo
-        let alvo = gatilho.dataset.alvo;
+        let local = gatilho.dataset.local;
         // Verificar se o gatilho está acima do topo da página
-        if(alvo == "1"){
+        if(local == "UF"){
             // se sim, adiciona a classe que exibe o gráfico
-            alvo.classList.add('passo-ativo');
-        }else{
+            posicao.classList.add('passo-ativo');
+            // posicao.style.display = 'flex'
+        } else{
             // caso contrário, retire a classe
-            alvo.classList.remove('passo-ativo');
+            posicao.classList.remove('passo-ativo');
         }
     }
 }
 
 // 2. pedir ao navegador para escutar 
 // o evento de rolagem da página
-window.addEventListener('scroll', escutaScroll);
+window.addEventListener('click', escutaScroll);
