@@ -1,0 +1,142 @@
+[
+  {
+    "atividade": "Balé",
+    "kcal": 8,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Basquete",
+    "kcal": 10,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Beijando",
+    "kcal": 8,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Boxe",
+    "kcal": 11,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Caminhada",
+    "kcal": "5,5",
+    "tempo": "min"
+  },
+  {
+    "atividade": "Capoeira",
+    "kcal": 12,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Ciclismo",
+    "kcal": 6,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Corrida",
+    "kcal": 10,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Dança de Salão",
+    "kcal": "3,5",
+    "tempo": "min"
+  },
+  {
+    "atividade": "Esqui aquático",
+    "kcal": 11,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Esqui na neve",
+    "kcal": "7,5",
+    "tempo": "min"
+  },
+  {
+    "atividade": "Futebol",
+    "kcal": 9,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Ginástica aeróbica",
+    "kcal": 6,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Ginástica olímpica",
+    "kcal": 6,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Golfe",
+    "kcal": 3,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Handebol",
+    "kcal": 10,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Hidroginástica",
+    "kcal": 6,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Jiu-jitsu",
+    "kcal": 12,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Judô",
+    "kcal": 12,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Mountain bike",
+    "kcal": 12,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Musculação",
+    "kcal": 5,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Natação",
+    "kcal": 9,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Remo",
+    "kcal": 11,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Squash",
+    "kcal": 13,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Surfe",
+    "kcal": 8,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Tênis",
+    "kcal": 8,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Vôlei",
+    "kcal": 6,
+    "tempo": "min"
+  },
+  {
+    "atividade": "Windsurf",
+    "kcal": 7,
+    "tempo": "min"
+  }
+]
