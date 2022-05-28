@@ -145,12 +145,7 @@ let dados = [
 // variavel para pegar elementos
 let entrada = document.querySelector('input')
 let saida = document.querySelector('output')
-
-// seleciona item definido no select > option
-function pegaEsporte(){
-	let esporte = document.querySelector('select').value
-	console.log(esporte)
-}
+let esporte = document.querySelector('select')
 
 // aplica a funcao ao jnout
 entrada.addEventListener('input', validar)
@@ -177,7 +172,7 @@ function calcular (tempo) {
 	for (let dado of dados) {
 		//console.log(dado)
 		// encontra a linha correspondente
-		if (dado.atividade == esporte){
+		if (dado.atividade == esporte.value){
 			// operacao matematica para calcular gasto calorico
 			caloriasGastas = tempo * parseInt(dado.kcal)
 			mostrar(caloriasGastas)
