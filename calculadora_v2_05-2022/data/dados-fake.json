@@ -1,0 +1,302 @@
+[
+  {
+    "pergunta": "Por que",
+    "pessoa": "meu namorado",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "meu namorado",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "meu namorado",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "meu namorado",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "meu namorado",
+    "resposta": "quer casar comigo"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "minha namorada",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "minha namorada",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "minha namorada",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "minha namorada",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Por que",
+    "pessoa": "minha namorada",
+    "resposta": "quer casar comigo"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "meu namorado",
+    "resposta": "quer de aniversário"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "meu namorado",
+    "resposta": "come demais"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "meu namorado",
+    "resposta": "diz que me ama"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "meu namorado",
+    "resposta": "acorda à noite"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "meu namorado",
+    "resposta": "faz no trabalho"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "minha namorada",
+    "resposta": "quer de aniversário"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "minha namorada",
+    "resposta": "come demais"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "minha namorada",
+    "resposta": "diz que me ama"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "minha namorada",
+    "resposta": "acorda à noite"
+  },
+  {
+    "pergunta": "O que",
+    "pessoa": "minha namorada",
+    "resposta": "faz no trabalho"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "meu namorado",
+    "resposta": "dorme"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "meu namorado",
+    "resposta": "consegue ser magro"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "meu namorado",
+    "resposta": "pode ficar sem me responder"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "meu namorado",
+    "resposta": "quer dormir comigo"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "meu namorado",
+    "resposta": "acorda cedo"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "minha namorada",
+    "resposta": "dorme"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "minha namorada",
+    "resposta": "consegue ser magro"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "minha namorada",
+    "resposta": "pode ficar sem me responder"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "minha namorada",
+    "resposta": "quer dormir comigo"
+  },
+  {
+    "pergunta": "Como",
+    "pessoa": "minha namorada",
+    "resposta": "acorda cedo"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "meu namorado",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "meu namorado",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "meu namorado",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "meu namorado",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "meu namorado",
+    "resposta": "quer casar comigo"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "minha namorada",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "minha namorada",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "minha namorada",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "minha namorada",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Quem",
+    "pessoa": "minha namorada",
+    "resposta": "quer casar comigo"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "meu namorado",
+    "resposta": "quer de aniversário"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "meu namorado",
+    "resposta": "come demais"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "meu namorado",
+    "resposta": "diz que me ama"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "meu namorado",
+    "resposta": "acorda à noite"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "meu namorado",
+    "resposta": "faz no trabalho"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "minha namorada",
+    "resposta": "quer de aniversário"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "minha namorada",
+    "resposta": "come demais"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "minha namorada",
+    "resposta": "diz que me ama"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "minha namorada",
+    "resposta": "acorda à noite"
+  },
+  {
+    "pergunta": "Onde",
+    "pessoa": "minha namorada",
+    "resposta": "faz no trabalho"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "meu namorado",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "meu namorado",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "meu namorado",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "meu namorado",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "meu namorado",
+    "resposta": "quer casar comigo"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "minha namorada",
+    "resposta": "me atrai"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "minha namorada",
+    "resposta": "me ama"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "minha namorada",
+    "resposta": "não responde"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "minha namorada",
+    "resposta": "gosta de mim"
+  },
+  {
+    "pergunta": "Quando",
+    "pessoa": "minha namorada",
+    "resposta": "quer casar comigo"
+  }
+]

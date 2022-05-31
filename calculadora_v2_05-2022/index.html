@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<title>Calculadora de relacionamento</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="author" content="Gabriela Caesar">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="calculadora, insper">
+	<meta name="description" content="Projeto de Gabriela Caesar">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Dia dos Namorados</h1>
+	<h2 class="flex">O Dia dos Namorados é comemorado no próximo domingo (12). Por isso, veja o que os brasileiros pesquisam no Google sobre "meu namorado" e "minha namorada".</h2>
+	<h3 class="flex">Primeiro, calcule quanto tempo de relacionamento vocês têm:</h3>
+	<label>Data de início do relacionamento:</label>
+	<br>
+	<div class="flex">
+		<input type="date" id="inicio-relacionamento" name="inicio-relacionamento">
+	</div>
+	<p>Vocês estão há 
+		<output id="dias-relacionamento" name="dias-relacionamento">...</output> 
+	dias juntos! <span id="heart">&#10084</span>
+	</p>
+	<p>Isso também quer dizer <output id="finde-relacionamento" name="finde-relacionamento">...</output>
+	fins de semana.
+	</p>
+	<p>Ou
+		<output id="hora-relacionamento" name="hora-relacionamento">...</output>
+	horas.
+	</p>
+	<p>Ou
+		<output id="minutos-relacionamento" name="minutos-relacionamento">...</output>
+	minutos.	
+	</p>
+	<h4>Abaixo, defina o que você quer saber:</h4>
+	<div class="flex">
+		<select id="pergunta" onchange="">
+			<option values="Por que">Por que</option>
+			<option values="Como">Como</option>
+			<option values="O que">O que</option>
+			<option values="Quem">Quem</option>
+			<option values="Onde">Onde</option>
+			<option values="Quando">Quando</option>
+		</select>
+	</div>
+	<div class="flex">
+		<select id="pessoa" onchange="">
+			<option values="meu namorado">meu namorado</option>
+			<option values="minha namorada">minha namorada</option>
+		</select>
+	</div>
+	<br>
+	<output id="query" name="query">xxxxx</output>
+
+	<footer>Dados FAKE dos últimos 12 meses do Google Trends. Feito por Gabriela Caesar</footer>
+	<script src="script.js"></script>
+</body>
+</html>
