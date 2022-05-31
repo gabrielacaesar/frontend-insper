@@ -323,7 +323,7 @@ function calcularTempo(entradaData) {
 	// variavel do input
 	let data = dataInicio.value
   console.log(data)
-  // calculo
+  // calculo do tempo de relacionamento
 	let diasRelacionamento = hojeData - data
   mostrar(diasRelacionamento)
   // retorna valor para output
@@ -331,11 +331,11 @@ function calcularTempo(entradaData) {
 }
 
 function mostrar(diasRelacionamento) {
-	saidaData.textContent = diasRelacionamento
+	diasRelacionamento.textContent = diasRelacionamento
 }
 
 function limpar() {
-	saidaData.textContent = "..."
+	diasRelacionamento.textContent = "..."
 }
 
 // definir query para mostrar
@@ -343,10 +343,10 @@ function definirResposta() {
   for (let dado of dados) {
     console.log(dado)
     // encontra a linha correspondente
-    if (dado.pergunta == pergunta.value && dado.pessoa = pessoa.value){
-      // guarda a resposta certa dentro da variavel query
+    if (dado.pergunta == pergunta.value && dado.pessoa == pessoa.value){
+      // guarda o resultado na variavel
       query = dado.resposta
-      // exibe resposta no html
+      // exibe a resposta no site
       mostrar(query)
       // para de checar depois de achar a correspondencia
       break
