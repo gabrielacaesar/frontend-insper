@@ -344,8 +344,9 @@ function definirResposta() {
     console.log(dado)
     // encontra a linha correspondente
     if (dado.pergunta == pergunta.value && dado.pessoa = pessoa.value){
-      // operacao matematica para calcular gasto calorico
+      // guarda a resposta certa dentro da variavel query
       query = dado.resposta
+      // exibe resposta no html
       mostrar(query)
       // para de checar depois de achar a correspondencia
       break
