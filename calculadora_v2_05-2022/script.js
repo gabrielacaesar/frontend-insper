@@ -310,32 +310,52 @@ let hojeData = dataCompleta.toISOString().split('T')[0]
 // variavel para pegar elementos
 // trecho que calcula tempo de relacionamento
 let dataInicio = document.querySelector('#inicio-relacionamento')
-let diasRelacionamento = document.querySelector('#dias-relacionamento')
+let outputDias = document.querySelector('#dias-relacionamento')
+let outputFinde = document.querySelector('#finde-relacionamento')
+let outputHora = document.querySelector('#hora-relacionamento')
+let outputMinuto = document.querySelector('#minutos-relacionamento')
 
 // variavel para pegar elementos
 // trecho que pega as opcoes selecionadas
-let pergunta = document.querySelector('#pergunta')
-let pessoa = document.querySelector('#pessoa')
-let query = document.querySelector('#query')
+let inputPergunta = document.querySelector('#pergunta')
+let inputPessoa = document.querySelector('#pessoa')
+let outputQuery = document.querySelector('#query')
+
+// ouve o evento e roda a funcao
+dataInicio.addEventListener('change', calcularTempo)
+inputPergunta.addEventListener('change', definirResposta)
 
 // funcao para calcular tempo de relacionamento
 function calcularTempo(entradaData) {
 	// variavel do input
 	let data = dataInicio.value
-  console.log(data)
+  // considera como data object
+	let diferenca = new Date(hojeData) - new Date(data)
   // calculo do tempo de relacionamento
-	let diasRelacionamento = hojeData - data
-  mostrar(diasRelacionamento)
-  // retorna valor para output
-  return diasRelacionamento
+  let diasRelacionamento = diferenca / (1000 * 60 * 60 * 24)
+  let findeRelacionamento = Math.round(diasRelacionamento / 7)
+  let horaRelacionamento = diferenca / (1000 * 60 * 60)
+  let minutoRelacionamento = diferenca / (1000 * 60)
+
+  // executa funcao mostrar()
+  mostrar(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento)
 }
 
-function mostrar(diasRelacionamento) {
-	diasRelacionamento.textContent = diasRelacionamento
+function mostrar(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento, query) {
+	outputDias.textContent = diasRelacionamento;
+  outputFinde.textContent = findeRelacionamento;
+  outputHora.textContent = horaRelacionamento;
+  outputMinuto.textContent = minutoRelacionamento;
+  outputQuery.textContent = query;
 }
 
+// deletar se nao for usar
 function limpar() {
-	diasRelacionamento.textContent = "..."
+	outputDias.textContent = "____"
+  outputFinde.textContent = "____"
+  outputHora.textContent = "____"
+  outputMinuto.textContent = "____"
+  outputQuery.textContent = "____"
 }
 
 // definir query para mostrar
@@ -343,9 +363,9 @@ function definirResposta() {
   for (let dado of dados) {
     console.log(dado)
     // encontra a linha correspondente
-    if (dado.pergunta == pergunta.value && dado.pessoa == pessoa.value){
+    if (dado.pergunta == inputPergunta.value && dado.pessoa == inputPessoa.value){
       // guarda o resultado na variavel
-      query = dado.resposta
+      let query = dado.resposta
       // exibe a resposta no site
       mostrar(query)
       // para de checar depois de achar a correspondencia
