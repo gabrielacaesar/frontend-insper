@@ -315,15 +315,43 @@ let outputFinde = document.querySelector('#finde-relacionamento')
 let outputHora = document.querySelector('#hora-relacionamento')
 let outputMinuto = document.querySelector('#minutos-relacionamento')
 
+// define data maxima (impedir dados negativos)
+// https://stackoverflow.com/questions/38638424/html5-input-type-date-disable-dates-before-today
+var today = new Date().toISOString().slice(0,10);
+dataInicio.setAttribute('max', today);
+
 // variavel para pegar elementos
 // trecho que pega as opcoes selecionadas
 let inputPergunta = document.querySelector('#pergunta')
 let inputPessoa = document.querySelector('#pessoa')
 let outputQuery = document.querySelector('#query')
 
+// funcao para mostrar dados
+function mostrarDados(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento) {
+  outputDias.textContent = diasRelacionamento;
+  outputFinde.textContent = findeRelacionamento;
+  outputHora.textContent = horaRelacionamento;
+  outputMinuto.textContent = minutoRelacionamento;
+}
+
+// funcao para mostrar query
+function mostrarQuery(query){
+  outputQuery.textContent = query;
+}
+
+// deletar se nao for usar
+function limpar() {
+  outputDias.textContent = "____"
+  outputFinde.textContent = "____"
+  outputHora.textContent = "____"
+  outputMinuto.textContent = "____"
+  outputQuery.textContent = "____"
+}
+
 // ouve o evento e roda a funcao
 dataInicio.addEventListener('change', calcularTempo)
 inputPergunta.addEventListener('change', definirResposta)
+inputPessoa.addEventListener('change', definirResposta)
 
 // funcao para calcular tempo de relacionamento
 function calcularTempo(entradaData) {
@@ -338,24 +366,7 @@ function calcularTempo(entradaData) {
   let minutoRelacionamento = diferenca / (1000 * 60)
 
   // executa funcao mostrar()
-  mostrar(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento)
-}
-
-function mostrar(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento, query) {
-	outputDias.textContent = diasRelacionamento;
-  outputFinde.textContent = findeRelacionamento;
-  outputHora.textContent = horaRelacionamento;
-  outputMinuto.textContent = minutoRelacionamento;
-  outputQuery.textContent = query;
-}
-
-// deletar se nao for usar
-function limpar() {
-	outputDias.textContent = "____"
-  outputFinde.textContent = "____"
-  outputHora.textContent = "____"
-  outputMinuto.textContent = "____"
-  outputQuery.textContent = "____"
+  mostrarDados(diasRelacionamento, findeRelacionamento, horaRelacionamento, minutoRelacionamento)
 }
 
 // definir query para mostrar
@@ -367,7 +378,7 @@ function definirResposta() {
       // guarda o resultado na variavel
       let query = dado.resposta
       // exibe a resposta no site
-      mostrar(query)
+      mostrarQuery(query)
       // para de checar depois de achar a correspondencia
       break
     }

@@ -4,28 +4,25 @@
 	margin: 0;
 	font-family: 'Noto Serif', sans-serif;
 	box-sizing: border-box;
-	background-color: #548cf4;
+	background-color: #041014;
 	padding: 0 10%;
 	margin-top: 1%;
 }
 
-h2, h3, p, input, select, option, footer, output, span, div {
-	color: #f8f4f4;
-}
-
-h4 {
-	color: #e8e4e4;
-}
-
 h1 {
 	text-align: center;
-	color: orange;
 	font-size: 40px;
 }
 
 h2 {
 	margin-top: 2%;
+	font-size: 20px;
 }
+
+h3 {
+	font-size: 18px;
+}
+
 
 footer {
 	margin: 20px 0px;
@@ -33,16 +30,17 @@ footer {
 
 select, input {
 	height: 35px;
-	background-color: white;
-	color: black;
-	text-align-last:center;
+	background-color: transparent;
+	display: inline;
+	text-align-last: center;
+	flex-grow: 0;
 }
 
 output {
 	padding: 0;
-	font-size: 20px;
-	color: darkblue;
+	font-size: 15px;
 	font-weight: 800;
+	color: orange;
 }
 
 .flex {
@@ -51,10 +49,37 @@ output {
 	flex-direction: column;
 }
 
+.row {
+	flex-direction: row;
+	justify-content: space-between;
+}
+
 #heart {
-	color: red;
 	display: inline-block;
 	padding: 0;
+	font-size: 20px;
+	color: #f0443c;
+}
+
+input, select {
+	border: 2px solid #ffbc0c; /* yellow */
+}
+
+#query {
+	align-self: center;
+}
+
+/* colors */
+.blue {
+	color: #2596be; /* blue */
+}
+
+.blue-2 {
+	color: #145369;
+}
+
+.yellow {
+	color: #ffbc0c
 }
 
 @media only screen and (max-width: 768px) {
@@ -65,4 +90,10 @@ output {
   select, input {
 	height: 20px;
 	}
+  .row {
+  	flex-direction: column;
+  }
+  #pessoa {
+  	margin-top: 15px;
+  }
 }

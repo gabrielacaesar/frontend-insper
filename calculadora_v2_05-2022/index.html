@@ -12,32 +12,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<h1>Dia dos Namorados</h1>
-	<h2 class="flex">O Dia dos Namorados é comemorado no próximo domingo (12). Por isso, veja o que os brasileiros pesquisam no Google sobre "meu namorado" e "minha namorada".</h2>
-	<h3 class="flex">Primeiro, calcule quanto tempo de relacionamento vocês têm:</h3>
-	<h4>Data de início do relacionamento:</h4>
-	<br>
+	<h1 class="blue">Dia dos Namorados</h1>
+	<h2 class="flex blue-2">O Dia dos Namorados é comemorado no próximo domingo (12). Por isso, veja o que os brasileiros pesquisam no Google sobre "meu namorado" e "minha namorada".</h2>
+	<h3 class="flex blue-2">Primeiro, calcule quanto tempo de relacionamento vocês têm (se você estiver em um, claro):</h3>
+	<h4 class="blue">Data de início do relacionamento:</h4>
 	<div class="flex">
-		<input type="date" id="inicio-relacionamento" name="inicio-relacionamento">
+		<input class="blue-2" type="date" id="inicio-relacionamento" name="inicio-relacionamento">
 	</div>
-	<p>Vocês estão há 
-		<output id="dias-relacionamento" name="dias-relacionamento">____</output> 
+	<p class="blue">Vocês estão há 
+		<output class="yellow" id="dias-relacionamento" name="dias-relacionamento">____</output> 
 	dias juntos! <span id="heart">&#10084</span>
 	</p>
-	<p>Isso também quer dizer <output id="finde-relacionamento" name="finde-relacionamento">____</output>
+	<p class="blue">Isso também quer dizer 
+		<output class="yellow" id="finde-relacionamento" name="finde-relacionamento">____</output>
 	fins de semana.
 	</p>
-	<p>Ou
-		<output id="hora-relacionamento" name="hora-relacionamento">____</output>
+	<p class="blue">Ou
+		<output class="yellow" id="hora-relacionamento" name="hora-relacionamento">____</output>
 	horas.
 	</p>
-	<p>Ou
-		<output id="minutos-relacionamento" name="minutos-relacionamento">____</output>
+	<p class="blue">Ou
+		<output class="yellow" id="minutos-relacionamento" name="minutos-relacionamento">____</output>
 	minutos.	
 	</p>
-	<h4>Abaixo, defina o que você quer saber:</h4>
-	<div class="flex">
-		<select id="pergunta" onchange="">
+	<h4 class="blue">Abaixo, defina o que você quer saber:</h4>
+	<div class="flex row">
+		<select class="blue-2" id="pergunta" onchange="">
 			<option values="Por que">Por que</option>
 			<option values="Como">Como</option>
 			<option values="O que">O que</option>
@@ -45,17 +45,16 @@
 			<option values="Onde">Onde</option>
 			<option values="Quando">Quando</option>
 		</select>
-	</div>
-	<div class="flex">
-		<select id="pessoa" onchange="">
+		<select class="blue-2" id="pessoa" onchange="">
 			<option values="meu namorado">meu namorado</option>
 			<option values="minha namorada">minha namorada</option>
 		</select>
+		<div class="flex boxQuery">
+			<output class="yellow" id="query" name="query">____</output>
+		</div>
 		<br>
-		<output id="query" name="query">____</output>
 	</div>
-
-	<footer>Dados FAKE dos últimos 12 meses do Google Trends. Feito por Gabriela Caesar</footer>
+	<footer class="blue">Dados FAKE dos últimos 12 meses do Google Trends. Feito por Gabriela Caesar</footer>
 	<script src="script.js"></script>
 </body>
 </html>
