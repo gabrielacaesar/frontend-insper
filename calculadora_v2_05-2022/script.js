@@ -339,15 +339,6 @@ function mostrarQuery(query){
   outputQuery.textContent = query;
 }
 
-// deletar se nao for usar
-function limpar() {
-  outputDias.textContent = "____"
-  outputFinde.textContent = "____"
-  outputHora.textContent = "____"
-  outputMinuto.textContent = "____"
-  outputQuery.textContent = "____"
-}
-
 // ouve o evento e roda a funcao
 dataInicio.addEventListener('change', calcularTempo)
 inputPergunta.addEventListener('change', definirResposta)
