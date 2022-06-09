@@ -1,0 +1,114 @@
+<!-- parte 1 -->
+seu nome:
+<input type="text" name="" class="nome">
+
+<br>
+
+<!-- parte 2 -->
+quantos cachorros vc tem?
+<input type="range" name="" min="0" max="100" class="cachorros", value="0">
+
+<br>
+
+Voce tem <span></span> cachorros.
+
+<br>
+
+<!-- parte 3 -->
+<label>
+	<input type="checkbox" class="modo">Modo escuro
+</label>
+
+<br>
+<!-- parte 4 -->
+
+<label>
+	<input name="streaming" type="checkbox" name="" value="netflix">Netflix
+</label>
+<label>
+	<input name="streaming" type="checkbox" name="" value="globoplay">Globoplay
+</label>
+<label>
+	<input name="streaming" type="checkbox" name="" value="hbo">HBO
+</label>
+<label>
+	<input name="streaming" type="checkbox" name="" value="amazon">Amazon
+</label>
+
+<br>
+
+<ul></ul>
+
+
+<script>
+	/* parte 1 */
+	let nome = document.querySelector('.nome')
+	nome.addEventListener('change', filtrar)
+
+	function filtrar(){
+		console.log(nome.value)
+	}
+
+	/* parte 2 */
+	let cachorros = document.querySelector('.cachorros')
+	let contador = document.querySelector('span')
+
+	cachorros.addEventListener('input', mostrar)
+
+	function mostrar() {
+		console.log(cachorros.value)
+		contador.textContent = cachorros.value
+	}
+
+	/* parte 3 */
+
+	let checkbox = document.querySelector('.modo')
+	checkbox.addEventListener('input', mostrar_2)
+
+	function mostrar_2() {
+		console.log(checkbox.checked)
+		if(checkbox.checked){
+			document.body.style.backgroundColor = 'black'
+			document.body.style.color = 'white'
+		} else {
+			document.body.style.backgroundColor = 'white'
+			document.body.style.color = 'black'
+		}
+	}
+
+	/* parte 4 */
+	let filmes = [{nome : 'oi',streaming : 'netflix'},
+		{nome : 'tchau',streaming : 'amazon'},
+		{nome : 'bye',streaming : 'globoplay'},
+		{nome : 'aaaaa',streaming : 'netflix'},
+		{nome : 'bbbb',streaming : 'hbo'}]
+
+	let streamings = document.querySelectorAll('input[name="streaming"]')
+	outputStreaming = document.querySelector('.outputStreaming')
+
+	for (let streaming of streamings) {
+		streaming.addEventListener('input', filtrar_2)
+	}
+
+
+	let lista = document.querySelector('ul')
+
+	function filtrar_2() {
+		lista.textContent = ''
+		for (let streaming of streamings) {
+			if (streaming.checked){
+				for (let filme of filmes) {
+					if (streaming.value == filme.streaming){
+						
+						let item = document.createElement('li')
+						item.textContent = filme.nome
+						lista.append(item)
+						console.log(filme.nome)
+
+					}
+				}
+			}
+		}
+	}
+
+</script>
