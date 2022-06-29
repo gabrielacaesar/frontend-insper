@@ -3,7 +3,7 @@ let mapaDados;
 
 async function loadMapData(){
 	let mapaUrl = 'https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=image/svg+xml&qualidade=intermediaria&intrarregiao=UF';
-	let dadosUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
+	let dadosUrl =`./resultados/election-data.json`;
 	
 	let mapaSvg = await fetch(mapaUrl)
 	mapaMalha = await mapaSvg.text();
@@ -11,6 +11,7 @@ async function loadMapData(){
 
 	let dadosJson = await fetch(dadosUrl);
     mapaDados = await dadosJson.json();
+	console.log(mapaDados)
 
     let mapaConteudo = document.querySelector('#map-box');
     mapaConteudo.innerHTML = mapaMalha;
@@ -29,5 +30,3 @@ function mostraHover(){
 	// 2. para uf de mapaDados > id (que ta no json) = uf
 	// 3. agora pega a uf e coloca no hover
 }
-
-// 2h01min
