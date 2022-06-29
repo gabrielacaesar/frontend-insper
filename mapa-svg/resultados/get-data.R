@@ -102,4 +102,4 @@ final_resultados <- pt_resultados %>%
   relocate(regiao, .after = "sg_uf") %>%
   left_join(tidy_eleitores, by = "sg_uf")
 
-# write(jsonlite::toJSON(final_resultados), "final_resultados.json")
+# write(jsonlite::toJSON(final_resultados), "election-data.json")
