@@ -1,0 +1,8 @@
+pendencias
+
+add mes por extenso
+add cod ibge direto no json
+add ponto nos dados e vir como string
+add cor de acordo com o partido no mapa
+e mostrar dropdown com uf
+add opcao para dados do BR (botao logo abaixo)
