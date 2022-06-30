@@ -14,52 +14,255 @@
 <body>
 	<section class="flex column">
 		<h1>Eleições no Brasil</h1>
-		<h2>Role para baixo e clique nos estados para descobrir mais sobre o comportamento eleitoral nas eleições presidenciais no Brasil</h2>
+		<h2>O comportamento eleitoral dos estados do Brasil nas eleições presidenciais desde 2002</h2>
 		<p class="author">@gabrielacaesar</p>
 	</section>
 
+	<section class="flex full-box">
+	<section class="left-box">
+
+		<section class="uf">
+			<!--nome por extenso da UF>-->
+			<span>UF selecionada: </span><span class="sg_uf"></span>
+			<br>
+			<span class="nr_turno"></span><span>º turno</span><span> - Região </span><span class="regiao"></span>
+			<br>
+			<span>A UF tem </span><span class="qtd_elei_2022"></span><span> eleitores em 2022</span>
+			<br>
+			<span>Isso equivale a </span><span class="perc_elei_2022"></span></span>% dos eleitores do Brasil</span>
+		</section>
+
+	<p class="orientacao">Clique abaixo para mudar o turno:</p>
+	<section class="flex row">
+		<div class="round round-1" data-round="1">1º turno</div>
+		<div class="round round-2" data-round="2">2º turno</div>
+	</section>
+
+	<p class="orientacao">Se preferir, selecione a UF no menu abaixo:</p>
+	<section class="dropdown">
+		<select id="uf-brasil">
+			<option selected value="blank">Selecione a UF</option>
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
+	</section>
+
+	<p class="orientacao mapa-orientacao">Ou passe o mouse em cima da UF no mapa abaixo:</p>
 	<section class="flex column">
 		<div id="map-box"></div>
 	</section>
 
-	<section class="flex column">
-		<div id="text-box">
-			<section class="uf">
-				<div class="nm_uf"></div>
-				<div class="nr_turno"></div>
-				<div class="regiao_uf"></div>
-				<div class="elei_uf"></div>
-			</section>
-			<section class="eleicao_2018 dados_cand">
-				<div class="cand pt">
-					<div class="nm_cand"></div>
-					<div class="sg_partido"></div>
-					<div class="status"></div>
-					<div class="perc_cand"></div>
-					<div class="voto_cand"></div>
-				</div>
-				<div class="cand psl">
-					<div class="nm_cand"></div>
-					<div class="sg_partido"></div>
-					<div class="status"></div>
-					<div class="perc_cand"></div>
-					<div class="voto_cand"></div>
-				</div>
-			</section>
-			<section class="eleicao_2018 dif_cand">
-				<div class="dif_votos"></div>
-				<div class="dif_pp"></div>
-			</section>
-		</div>
-	</section>
+</section>
 
+<section class="right-box">
+
+<!-- 2018 -->
 	<section class="flex row">
-		<div class="round round-1">1º turno</div>
-		<div class="round round-2">2º turno</div>
+		<div id="text_box">
+			<section class="eleicao_2018">
+			<div class="ano_eleicao"></div>
+			</section>
+			<section class="eleicao_2018 dados_cand flex row">
+			<img clas="cand_img" src="img/fernando-haddad.png" alt="">
+				<div class="cand pt">
+					<span class="candidato_1"></span> (<span class="partido_1"></span>)
+					<br>
+					<!--<span>Resultado: </span><span class="situacao_1"></span>
+					<br>-->
+					<span class="perc_1"></span><span>% dos votos válidos</span>
+					<br>
+					<span class="votos_1"></span><span> votos</span>
+				</div>
+			<img clas="cand_img" src="img/jair-bolsonaro.png" alt="">
+				<div class="cand psl">
+					<span class="candidato_2"></span> (<span class="partido_2"></span>)
+					<br>
+					<!--<span>Resultado: </span><span class="situacao_2"></span>
+					<br>-->
+					<span class="perc_2"></span><span>% dos votos válidos</span>
+					<br>
+					<span class="votos_2"></span><span> votos</span>
+				</div>
+				<div class="cand dif">
+					<div>Diferença</div>
+					<ul>
+						<li><span class="diferenca_pp"></span><span> p.p.</span></li>
+						<li><span class="diferenca_absoluta"></span><span> votos</span></li>
+					</ul>
+				</div>
+		</section>
+<!-- 2014 -->
+<section class="flex row">
+	<div id="text_box">
+		<section class="eleicao_2014">
+		<div class="ano_eleicao"></div>
+		</section>
+		<section class="eleicao_2014 dados_cand flex row">
+		<img clas="cand_img" src="img/dilma.png" alt="">
+			<div class="cand pt">
+				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_1"></span>
+				<br>-->
+				<span class="perc_1"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_1"></span><span> votos</span>
+			</div>
+			<img clas="cand_img" src="img/aecio-neves.png" alt="">
+			<div class="cand psdb">
+				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_2"></span>
+				<br>-->
+				<span class="perc_2"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_2"></span><span> votos</span>
+			</div>
+			<div class="cand dif">
+				<div>Diferença</div>
+				<ul>
+					<li><span class="diferenca_pp"></span><span> p.p.</span></li>
+					<li><span class="diferenca_absoluta"></span><span> votos</span></li>
+				</ul>
+			</div>
 	</section>
 
+<!-- 2010 -->
+<section class="flex row">
+	<div id="text_box">
+		<section class="eleicao_2010">
+		<div class="ano_eleicao"></div>
+		</section>
+		<section class="eleicao_2010 dados_cand flex row">
+		<img clas="cand_img" src="img/dilma.png" alt="">
+			<div class="cand pt">
+				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_1"></span>
+				<br>-->
+				<span class="perc_1"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_1"></span><span> votos</span>
+			</div>
+			<img clas="cand_img" src="img/jose-serra.png" alt="">
+			<div class="cand psdb">
+				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_2"></span>
+				<br>-->
+				<span class="perc_2"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_2"></span><span> votos</span>
+			</div>
+			<div class="cand dif">
+				<div>Diferença</div>
+				<ul>
+					<li><span class="diferenca_pp"></span><span> p.p.</span></li>
+					<li><span class="diferenca_absoluta"></span><span> votos</span></li>
+				</ul>
+			</div>
+	</section>
+
+<!-- 2006 -->
+<section class="flex row">
+	<div id="text_box">
+		<section class="eleicao_2006">
+		<div class="ano_eleicao"></div>
+		</section>
+		<section class="eleicao_2006 dados_cand flex row">
+			<img clas="cand_img" src="img/lula.png" alt="">
+			<div class="cand pt">
+				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_1"></span>
+				<br>-->
+				<span class="perc_1"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_1"></span><span> votos</span>
+			</div>
+			<img clas="cand_img" src="img/geraldo-alckmin.png" alt="">
+			<div class="cand psdb">
+				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_2"></span>
+				<br>-->
+				<span class="perc_2"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_2"></span><span> votos</span>
+			</div>
+			<div class="cand dif">
+				<div>Diferença</div>
+				<ul>
+					<li><span class="diferenca_pp"></span><span> p.p.</span></li>
+					<li><span class="diferenca_absoluta"></span><span> votos</span></li>
+				</ul>
+			</div>
+	</section>
+
+<!-- 2002 -->
+<section class="flex row">
+	<div id="text_box">
+		<section class="eleicao_2002">
+		<div class="ano_eleicao"></div>
+		</section>
+		<section class="eleicao_2002 dados_cand flex row">
+		<img clas="cand_img" src="img/lula.png" alt="">
+			<div class="cand pt">
+				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_1"></span>
+				<br>-->
+				<span class="perc_1"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_1"></span><span> votos</span>
+			</div>
+			<img clas="cand_img" src="img/jose-serra.png" alt="">
+			<div class="cand psdb">
+				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<br>
+				<!--<span>Resultado: </span><span class="situacao_2"></span>
+				<br>-->
+				<span class="perc_2"></span><span>% dos votos válidos</span>
+				<br>
+				<span class="votos_2"></span><span> votos</span>
+			</div>
+			<div class="cand dif">
+				<div>Diferença</div>
+				<ul>
+					<li><span class="diferenca_pp"></span><span> p.p.</span></li>
+					<li><span class="diferenca_absoluta"></span><span> votos</span></li>
+				</ul>
+			</div>
+	</section>
+</section>
 	<footer class="flex column">
-		<p>Plataforma desenvolvida por Gabriela Caesar em junho de 2022 durante o Master no Insper</p>
+		<p>Os dados são do Portal de Dados Abertos do Tribunal Superior Eleitoral. O código em R para chegar ao JSON que alimenta esta plataforma está aqui. O cálculo do percentual dos votos válidos considera a quantidade de votos recebidas por todos os candidatos. Por isso, no primeiro turno, a soma dos dois candidatos exibidos não dá 100%. Este projeto optou por exibir no primeiro turno apenas os dois candidatos que disputaram o segundo turno das eleições.</p>
+		<p>Plataforma desenvolvida por Gabriela Caesar em junho de 2022 durante o Master no Insper, com ajuda de Tiago Maranhão.</p>
 	</footer>
 	<script src="script.js"></script>
 </body>
