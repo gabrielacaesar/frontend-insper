@@ -197,12 +197,20 @@ img {
     .dropdown {
         text-align: center;
     }
+    .right-box {
+        padding: 0;
+        width: 100%;
+    }
     .right-box, footer {
         padding-top: 5%;
     }
     .dados_cand {
         flex-direction: column;
+        text-align: center;
     } 
+    .cand > span:first-child, .cand > div:first-child {
+        font-weight: 800;
+    }
     img {
         display: none;
     }
