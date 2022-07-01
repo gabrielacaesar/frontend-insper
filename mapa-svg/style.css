@@ -23,6 +23,10 @@ h2, footer {
     padding: 0 5%;
 }
 
+a {
+    color: orange;
+}
+
 footer {
     margin-bottom: 3%;
     padding-top: 3%;

@@ -1,8 +1,16 @@
 pendencias
 
-add mes por extenso
-add cod ibge direto no json
-add ponto nos dados e vir como string
-add cor de acordo com o partido no mapa
+add mes por extenso - ok
+add cod ibge direto no json - ok
+add ponto nos dados e vir como string - ok
+
+ano eleicao e nome + partido: estatico - ok
+
+add link twitter, tse, github - ok
+
+map color: perc eleitores
+add hover: nome da UF
 e mostrar dropdown com uf
+
 add opcao para dados do BR (botao logo abaixo)
+add 'exterior' ao lado de brasil
