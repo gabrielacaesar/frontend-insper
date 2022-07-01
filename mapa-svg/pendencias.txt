@@ -12,5 +12,5 @@ map color: perc eleitores
 add hover: nome da UF
 e mostrar dropdown com uf
 
-add opcao para dados do BR (botao logo abaixo)
-add 'exterior' ao lado de brasil
+add botao de 'br' e 'exterior' - ok
+add dados de 'br' e 'exterior' 

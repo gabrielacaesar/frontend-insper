@@ -2,9 +2,28 @@ let mapaMalha;
 let dadosTse;
 let dadosIbge;
 
+let userRound_1 = document.querySelector('.round-1')
+let userRound_2 = document.querySelector('.round-2')
+let userBr = document.querySelector('.data-br')
+let userExterior = document.querySelector('.data-exterior')
+let userDropdown = document.querySelector('#uf-brasil')
+
+function pegaAtributo(variavel){
+	variavel.addEventListener("click", function(){
+		console.log(this.getAttribute('data-value'));
+	})}
+
+pegaAtributo(userRound_1)
+pegaAtributo(userRound_2)
+pegaAtributo(userBr)
+pegaAtributo(userExterior)
+// se retorna algo diferente de null, entao colocar dentro da funcao
+// se o value do dropdown for diferente de blank, entao colocar dentro da funcao
+
+
 async function loadMapData(){
 	let mapaUrl = 'https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=image/svg+xml&qualidade=intermediaria&intrarregiao=UF';
-	let arquivoTse =`./resultados/election-data.json`;
+	let arquivoTse =`./resultados/election-data-2.json`;
 	let urlIbge = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
 	
 	// svg
@@ -59,28 +78,22 @@ function preencheCard(dados){
 	let dados_2002 = dados.filter(function(linha){return linha.ano_eleicao == 2002})
 	console.log(dados_2018, dados_2018.candidato_1)
 
+
+	document.querySelector('#text_box > div > .nm_uf').textContent = dados_2018[0].nm_uf
+	document.querySelector('#text_box > .nm_uf_hover').textContent = dados_2014[0].nm_uf
 	///// 2018
 	// abertura
 	document.querySelector('.uf > .sg_uf').textContent = dados_2018[0].sg_uf
-	document.querySelector('.uf > .nr_turno').textContent = dados_2018[0].nr_turno
-	document.querySelector('.uf > .regiao').textContent = dados_2018[0].regiao
-	document.querySelector('.uf > .qtd_elei_2022').textContent = dados_2018[0].qtd_elei_2022
-	document.querySelector('.uf > .perc_elei_2022').textContent = dados_2018[0].perc_elei_2022
+	document.querySelector('#text_box > div > .nr_turno_str').textContent = dados_2018[0].nr_turno_str
+	document.querySelector('#text_box > div > .regiao').textContent = dados_2018[0].regiao
+	document.querySelector('.uf > .qtd_elei_2022_str').textContent = dados_2018[0].qtd_elei_2022_str
+	document.querySelector('.uf > .perc_elei_2022_str').textContent = dados_2018[0].perc_elei_2022_str
 
-	// ano
-	document.querySelector('.eleicao_2018 > .ano_eleicao').textContent = dados_2018[0].ano_eleicao
-	
 	// pt
-	document.querySelector('.eleicao_2018 > .pt > .candidato_1').textContent = dados_2018[0].candidato_1
-	document.querySelector('.eleicao_2018 > .pt > .partido_1').textContent = dados_2018[0].partido_1
-	//document.querySelector('.eleicao_2018 > .pt > .situacao_1').textContent = dados_2018[0].situacao_1
 	document.querySelector('.eleicao_2018 > .pt > .perc_1').textContent = dados_2018[0].perc_1
 	document.querySelector('.eleicao_2018 > .pt > .votos_1').textContent = dados_2018[0].votos_1
 
 	// psl
-	document.querySelector('.eleicao_2018 > .psl > .candidato_2').textContent = dados_2018[0].candidato_2
-	document.querySelector('.eleicao_2018 > .psl > .partido_2').textContent = dados_2018[0].partido_2
-	//document.querySelector('.eleicao_2018 > .psl > .situacao_2').textContent = dados_2018[0].situacao_2
 	document.querySelector('.eleicao_2018 > .psl > .perc_2').textContent = dados_2018[0].perc_2
 	document.querySelector('.eleicao_2018 > .psl > .votos_2').textContent = dados_2018[0].votos_2
 
@@ -91,25 +104,14 @@ function preencheCard(dados){
 	///// 2014
 	// abertura
 	document.querySelector('.uf > .sg_uf').textContent = dados_2014[0].sg_uf
-	document.querySelector('.uf > .nr_turno').textContent = dados_2014[0].nr_turno
-	document.querySelector('.uf > .regiao').textContent = dados_2014[0].regiao
-	document.querySelector('.uf > .qtd_elei_2022').textContent = dados_2014[0].qtd_elei_2022
-	document.querySelector('.uf > .perc_elei_2022').textContent = dados_2014[0].perc_elei_2022
-
-	// ano
-	document.querySelector('.eleicao_2014 > .ano_eleicao').textContent = dados_2014[0].ano_eleicao
+	document.querySelector('.uf > .qtd_elei_2022_str').textContent = dados_2014[0].qtd_elei_2022_str
+	document.querySelector('.uf > .perc_elei_2022_str').textContent = dados_2014[0].perc_elei_2022_str
 	
 	// pt
-	document.querySelector('.eleicao_2014 > .pt > .candidato_1').textContent = dados_2014[0].candidato_1
-	document.querySelector('.eleicao_2014 > .pt > .partido_1').textContent = dados_2014[0].partido_1
-	//document.querySelector('.eleicao_2014 > .pt > .situacao_1').textContent = dados_2014[0].situacao_1
 	document.querySelector('.eleicao_2014 > .pt > .perc_1').textContent = dados_2014[0].perc_1
 	document.querySelector('.eleicao_2014 > .pt > .votos_1').textContent = dados_2014[0].votos_1
 
 	// psdb
-	document.querySelector('.eleicao_2014 > .psdb > .candidato_2').textContent = dados_2014[0].candidato_2
-	document.querySelector('.eleicao_2014 > .psdb > .partido_2').textContent = dados_2014[0].partido_2
-	//document.querySelector('.eleicao_2014 > .psdb > .situacao_2').textContent = dados_2014[0].situacao_2
 	document.querySelector('.eleicao_2014 > .psdb > .perc_2').textContent = dados_2014[0].perc_2
 	document.querySelector('.eleicao_2014 > .psdb > .votos_2').textContent = dados_2014[0].votos_2
 
@@ -120,25 +122,14 @@ function preencheCard(dados){
 	///// 2010
 	// abertura
 	document.querySelector('.uf > .sg_uf').textContent = dados_2010[0].sg_uf
-	document.querySelector('.uf > .nr_turno').textContent = dados_2010[0].nr_turno
-	document.querySelector('.uf > .regiao').textContent = dados_2010[0].regiao
-	document.querySelector('.uf > .qtd_elei_2022').textContent = dados_2010[0].qtd_elei_2022
-	document.querySelector('.uf > .perc_elei_2022').textContent = dados_2010[0].perc_elei_2022
-
-	// ano
-	document.querySelector('.eleicao_2010 > .ano_eleicao').textContent = dados_2010[0].ano_eleicao
+	document.querySelector('.uf > .qtd_elei_2022_str').textContent = dados_2010[0].qtd_elei_2022_str
+	document.querySelector('.uf > .perc_elei_2022_str').textContent = dados_2010[0].perc_elei_2022_str
 	
 	// pt
-	document.querySelector('.eleicao_2010 > .pt > .candidato_1').textContent = dados_2010[0].candidato_1
-	document.querySelector('.eleicao_2010 > .pt > .partido_1').textContent = dados_2010[0].partido_1
-	//document.querySelector('.eleicao_2010 > .pt > .situacao_1').textContent = dados_2010[0].situacao_1
 	document.querySelector('.eleicao_2010 > .pt > .perc_1').textContent = dados_2010[0].perc_1
 	document.querySelector('.eleicao_2010 > .pt > .votos_1').textContent = dados_2010[0].votos_1
 
 	// psdb
-	document.querySelector('.eleicao_2010 > .psdb > .candidato_2').textContent = dados_2010[0].candidato_2
-	document.querySelector('.eleicao_2010 > .psdb > .partido_2').textContent = dados_2010[0].partido_2
-	//document.querySelector('.eleicao_2010 > .psdb > .situacao_2').textContent = dados_2010[0].situacao_2
 	document.querySelector('.eleicao_2010 > .psdb > .perc_2').textContent = dados_2010[0].perc_2
 	document.querySelector('.eleicao_2010 > .psdb > .votos_2').textContent = dados_2010[0].votos_2
 
@@ -149,25 +140,14 @@ function preencheCard(dados){
 	///// 2006
 	// abertura
 	document.querySelector('.uf > .sg_uf').textContent = dados_2006[0].sg_uf
-	document.querySelector('.uf > .nr_turno').textContent = dados_2006[0].nr_turno
-	document.querySelector('.uf > .regiao').textContent = dados_2006[0].regiao
-	document.querySelector('.uf > .qtd_elei_2022').textContent = dados_2006[0].qtd_elei_2022
-	document.querySelector('.uf > .perc_elei_2022').textContent = dados_2006[0].perc_elei_2022
-
-	// ano
-	document.querySelector('.eleicao_2006 > .ano_eleicao').textContent = dados_2006[0].ano_eleicao
+	document.querySelector('.uf > .qtd_elei_2022_str').textContent = dados_2006[0].qtd_elei_2022_str
+	document.querySelector('.uf > .perc_elei_2022_str').textContent = dados_2006[0].perc_elei_2022_str
 	
 	// pt
-	document.querySelector('.eleicao_2006 > .pt > .candidato_1').textContent = dados_2006[0].candidato_1
-	document.querySelector('.eleicao_2006 > .pt > .partido_1').textContent = dados_2006[0].partido_1
-	//document.querySelector('.eleicao_2006 > .pt > .situacao_1').textContent = dados_2006[0].situacao_1
 	document.querySelector('.eleicao_2006 > .pt > .perc_1').textContent = dados_2006[0].perc_1
 	document.querySelector('.eleicao_2006 > .pt > .votos_1').textContent = dados_2006[0].votos_1
 
 	// psdb
-	document.querySelector('.eleicao_2006 > .psdb > .candidato_2').textContent = dados_2006[0].candidato_2
-	document.querySelector('.eleicao_2006 > .psdb > .partido_2').textContent = dados_2006[0].partido_2
-	//document.querySelector('.eleicao_2006 > .psdb > .situacao_2').textContent = dados_2006[0].situacao_2
 	document.querySelector('.eleicao_2006 > .psdb > .perc_2').textContent = dados_2006[0].perc_2
 	document.querySelector('.eleicao_2006 > .psdb > .votos_2').textContent = dados_2006[0].votos_2
 
@@ -178,25 +158,14 @@ function preencheCard(dados){
 	///// 2002
 	// abertura
 	document.querySelector('.uf > .sg_uf').textContent = dados_2002[0].sg_uf
-	document.querySelector('.uf > .nr_turno').textContent = dados_2002[0].nr_turno
-	document.querySelector('.uf > .regiao').textContent = dados_2002[0].regiao
-	document.querySelector('.uf > .qtd_elei_2022').textContent = dados_2002[0].qtd_elei_2022
-	document.querySelector('.uf > .perc_elei_2022').textContent = dados_2002[0].perc_elei_2022
-
-	// ano
-	document.querySelector('.eleicao_2002 > .ano_eleicao').textContent = dados_2002[0].ano_eleicao
+	document.querySelector('.uf > .qtd_elei_2022_str').textContent = dados_2002[0].qtd_elei_2022_str
+	document.querySelector('.uf > .perc_elei_2022_str').textContent = dados_2002[0].perc_elei_2022_str
 	
 	// pt
-	document.querySelector('.eleicao_2002 > .pt > .candidato_1').textContent = dados_2002[0].candidato_1
-	document.querySelector('.eleicao_2002 > .pt > .partido_1').textContent = dados_2002[0].partido_1
-	//document.querySelector('.eleicao_2002 > .pt > .situacao_1').textContent = dados_2002[0].situacao_1
 	document.querySelector('.eleicao_2002 > .pt > .perc_1').textContent = dados_2002[0].perc_1
 	document.querySelector('.eleicao_2002 > .pt > .votos_1').textContent = dados_2002[0].votos_1
 
 	// psdb
-	document.querySelector('.eleicao_2002 > .psdb > .candidato_2').textContent = dados_2002[0].candidato_2
-	document.querySelector('.eleicao_2002 > .psdb > .partido_2').textContent = dados_2002[0].partido_2
-	//document.querySelector('.eleicao_2002 > .psdb > .situacao_2').textContent = dados_2002[0].situacao_2
 	document.querySelector('.eleicao_2002 > .psdb > .perc_2').textContent = dados_2002[0].perc_2
 	document.querySelector('.eleicao_2002 > .psdb > .votos_2').textContent = dados_2002[0].votos_2
 

@@ -22,20 +22,22 @@
 	<section class="left-box">
 
 		<section class="uf">
-			<!--nome por extenso da UF>-->
 			<span>UF selecionada: </span><span class="sg_uf"></span>
+			<br>	
+			<span class="qtd_elei_2022_str"></span>
 			<br>
-			<span class="nr_turno"></span><span>º turno</span><span> - Região </span><span class="regiao"></span>
-			<br>
-			<span>A UF tem </span><span class="qtd_elei_2022"></span><span> eleitores em 2022</span>
-			<br>
-			<span>Isso equivale a </span><span class="perc_elei_2022"></span></span>% dos eleitores do Brasil</span>
+			<span class="perc_elei_2022_str"></span>
 		</section>
 
-	<p class="orientacao">Clique abaixo para mudar o turno:</p>
+	<p class="orientacao mapa-orientacao">Abaixo passe o mouse em cima da UF no mapa:</p>
+	<section class="flex column">
+		<div id="map-box"></div>
+	</section>
+
+	<p class="orientacao">Clique para mudar o turno:</p>
 	<section class="flex row">
-		<div class="round round-1" data-round="1">1º turno</div>
-		<div class="round round-2" data-round="2">2º turno</div>
+		<div class="round round-1" data-value="1">1º turno</div>
+		<div class="round round-2" data-value="2">2º turno</div>
 	</section>
 
 	<p class="orientacao">Se preferir, selecione a UF no menu abaixo:</p>
@@ -72,9 +74,9 @@
 		</select>
 	</section>
 
-	<p class="orientacao mapa-orientacao">Ou passe o mouse em cima da UF no mapa abaixo:</p>
-	<section class="flex column">
-		<div id="map-box"></div>
+	<section class="bottom-bttn flex column">
+		<div class="bttn data-br" data-value="br">Dados do Brasil</div>
+		<div class="bttn data-exterior" data-value="zz">Dados do Exterior</div>
 	</section>
 
 </section>
@@ -84,13 +86,19 @@
 <!-- 2018 -->
 	<section class="flex row">
 		<div id="text_box">
+			<div class="header flex row">
+				<span class="nr_turno_str"></span>
+				<span class="nm_uf"></span>
+				<span class="regiao"></span>
+			</div>
+			<span class="nm_uf_hover"></span>
 			<section class="eleicao_2018">
-			<div class="ano_eleicao"></div>
+			<div class="ano_eleicao">2018</div>
 			</section>
 			<section class="eleicao_2018 dados_cand flex row">
 			<img clas="cand_img" src="img/fernando-haddad.png" alt="">
 				<div class="cand pt">
-					<span class="candidato_1"></span> (<span class="partido_1"></span>)
+					<span class="candidato_1">Fernando Haddad (PT)</span>
 					<br>
 					<!--<span>Resultado: </span><span class="situacao_1"></span>
 					<br>-->
@@ -100,7 +108,7 @@
 				</div>
 			<img clas="cand_img" src="img/jair-bolsonaro.png" alt="">
 				<div class="cand psl">
-					<span class="candidato_2"></span> (<span class="partido_2"></span>)
+					<span class="candidato_2">Jair Bolsonaro (PSL)</span>
 					<br>
 					<!--<span>Resultado: </span><span class="situacao_2"></span>
 					<br>-->
@@ -120,12 +128,12 @@
 <section class="flex row">
 	<div id="text_box">
 		<section class="eleicao_2014">
-		<div class="ano_eleicao"></div>
+		<div class="ano_eleicao">2014</div>
 		</section>
 		<section class="eleicao_2014 dados_cand flex row">
 		<img clas="cand_img" src="img/dilma.png" alt="">
 			<div class="cand pt">
-				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<span class="candidato_1">Dilma (PT)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_1"></span>
 				<br>-->
@@ -135,7 +143,7 @@
 			</div>
 			<img clas="cand_img" src="img/aecio-neves.png" alt="">
 			<div class="cand psdb">
-				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<span class="candidato_2">Aécio Neves (PSDB)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_2"></span>
 				<br>-->
@@ -156,12 +164,12 @@
 <section class="flex row">
 	<div id="text_box">
 		<section class="eleicao_2010">
-		<div class="ano_eleicao"></div>
+		<div class="ano_eleicao">2010</div>
 		</section>
 		<section class="eleicao_2010 dados_cand flex row">
 		<img clas="cand_img" src="img/dilma.png" alt="">
 			<div class="cand pt">
-				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<span class="candidato_1">Dilma (PT)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_1"></span>
 				<br>-->
@@ -171,7 +179,7 @@
 			</div>
 			<img clas="cand_img" src="img/jose-serra.png" alt="">
 			<div class="cand psdb">
-				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<span class="candidato_2">José Serra (PSDB)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_2"></span>
 				<br>-->
@@ -192,12 +200,12 @@
 <section class="flex row">
 	<div id="text_box">
 		<section class="eleicao_2006">
-		<div class="ano_eleicao"></div>
+		<div class="ano_eleicao">2006</div>
 		</section>
 		<section class="eleicao_2006 dados_cand flex row">
 			<img clas="cand_img" src="img/lula.png" alt="">
 			<div class="cand pt">
-				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<span class="candidato_1">Lula (PT)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_1"></span>
 				<br>-->
@@ -207,7 +215,7 @@
 			</div>
 			<img clas="cand_img" src="img/geraldo-alckmin.png" alt="">
 			<div class="cand psdb">
-				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<span class="candidato_2">Geraldo Alckmin (PSDB)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_2"></span>
 				<br>-->
@@ -228,12 +236,12 @@
 <section class="flex row">
 	<div id="text_box">
 		<section class="eleicao_2002">
-		<div class="ano_eleicao"></div>
+		<div class="ano_eleicao">2002</div>
 		</section>
 		<section class="eleicao_2002 dados_cand flex row">
 		<img clas="cand_img" src="img/lula.png" alt="">
 			<div class="cand pt">
-				<span class="candidato_1"></span> (<span class="partido_1"></span>)
+				<span class="candidato_1">Lula (PT)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_1"></span>
 				<br>-->
@@ -243,7 +251,7 @@
 			</div>
 			<img clas="cand_img" src="img/jose-serra.png" alt="">
 			<div class="cand psdb">
-				<span class="candidato_2"></span> (<span class="partido_2"></span>)
+				<span class="candidato_1">José Serra (PSDB)</span>
 				<br>
 				<!--<span>Resultado: </span><span class="situacao_2"></span>
 				<br>-->
