@@ -2,21 +2,6 @@ let mapaMalha;
 let dadosTse;
 let dadosIbge;
 
-let userRound_1 = document.querySelector('.round-1')
-let userRound_2 = document.querySelector('.round-2')
-let userBr = document.querySelector('.data-br')
-let userExterior = document.querySelector('.data-exterior')
-let userDropdown = document.querySelector('#uf-brasil')
-
-function pegaAtributo(variavel){
-	variavel.addEventListener("click", function(){
-		console.log(this.getAttribute('data-value'));
-	})}
-
-pegaAtributo(userRound_1)
-pegaAtributo(userRound_2)
-pegaAtributo(userBr)
-pegaAtributo(userExterior)
 // se retorna algo diferente de null, entao colocar dentro da funcao
 // se o value do dropdown for diferente de blank, entao colocar dentro da funcao
 
@@ -172,6 +157,6 @@ function preencheCard(dados){
 	// diferença
 	document.querySelector('.eleicao_2002 > .dif > ul > li > .diferenca_pp').textContent = dados_2002[0].diferenca_pp
 	document.querySelector('.eleicao_2002 > .dif > ul > li > .diferenca_absoluta').textContent = dados_2002[0].diferenca_absoluta
-	
 
 }
+

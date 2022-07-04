@@ -36,8 +36,12 @@
 
 	<p class="orientacao">Clique para mudar o turno:</p>
 	<section class="flex row">
-		<div class="round round-1" data-value="1">1º turno</div>
-		<div class="round round-2" data-value="2">2º turno</div>
+		<label class="bttn-label">
+			<input class="bttn round-1" value="1" type="radio" name="turno">1º turno</input>
+		</label>
+		<label class="bttn-label">
+			<input checked class="bttn round-2" value="1" type="radio" name="turno">2º turno</input>
+		</label>
 	</section>
 
 	<p class="orientacao">Se preferir, selecione a UF no menu abaixo:</p>
@@ -74,9 +78,17 @@
 		</select>
 	</section>
 
-	<section class="bottom-bttn flex column">
-		<div class="bttn data-br" data-value="br">Dados do Brasil</div>
-		<div class="bttn data-exterior" data-value="zz">Dados do Exterior</div>
+	<p class="orientacao">Ou dados de...</p>
+	<section class="bottom-bttn flex row">
+		<label class="bttn-local">
+			<input checked class="bttn data-uf" value="uf" type="radio" name="local">UFs</input>
+		</label>
+		<label class="bttn-local">
+			<input class="bttn data-br" value="br" type="radio" name="local">Brasil</input>
+		</label>
+		<label class="bttn-local">
+			<input class="bttn data-exterior" value="zz" type="radio" name="local">Exterior</input>
+		</label>
 	</section>
 
 </section>

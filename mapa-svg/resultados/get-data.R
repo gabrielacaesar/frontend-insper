@@ -88,9 +88,6 @@ not_pt_resultados <- tidy_resultados %>%
          "VOTOS_2" = votos_cand,
          "PERC_2" = perc_cand)
 
-nm_uf <- fread("https://raw.githubusercontent.com/kelvins/Municipios-Brasileiros/main/csv/estados.csv",
-               select=c("codigo_uf", "uf", "nome"))
-
 final_resultados <- pt_resultados %>%
   left_join(not_pt_resultados, by = c("ANO_ELEICAO", "NR_TURNO", "SG_UF")) %>%
   relocate("CANDIDATO_2", .after = "CANDIDATO_1") %>%
@@ -103,18 +100,6 @@ final_resultados <- pt_resultados %>%
   janitor::clean_names() %>%
   left_join(regioes, by = c("sg_uf" = "uf")) %>%
   relocate(regiao, .after = "sg_uf") %>%
-  left_join(tidy_eleitores, by = "sg_uf") %>%
-  mutate(nr_turno = paste0(nr_turno, "º turno"),
-         regiao = paste0("Região ", regiao),
-         regiao = str_replace_all(regiao, "Região Exterior", "Exterior"),
-         cand_partido_1 = paste0(candidato_1, " (", partido_1, ")"),
-         cand_partido_2 = paste0(candidato_2, " (", partido_2, ")")) %>%
-  left_join(nm_uf, by = c("sg_uf" = "uf")) %>%
-  mutate_at(vars(starts_with("perc")), as.character) %>%
-  replace(is.na(.), "-") %>%
-  relocate(cand_partido_1, .before = candidato_1)
-  
-  
-# write.csv(final_resultados, "final_resultados.csv", row.names = FALSE)
+  left_join(tidy_eleitores, by = "sg_uf")
 
-# write(jsonlite::toJSON(final_resultados), "final_resultados.json")
+# write(jsonlite::toJSON(final_resultados), "election-data.json")
