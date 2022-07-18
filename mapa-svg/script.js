@@ -41,14 +41,56 @@ async function loadMapData(){
 }
 loadMapData();
 
+// filtro do round + filtro do local
+let userRound = document.querySelectorAll('[name=turno]')
+
+function obterTurno(){
+	for (let round of userRound){
+	if (round.checked) {
+		return parseInt(round.value)
+	}
+	}
+}
+
+let userLocal = document.querySelectorAll('[name=local]')
+function obterLocal(){
+	for (let local of userLocal){
+	if (local.checked) {
+		return local.value
+	}
+	}
+}
+
+for (let local of userLocal){
+	local.addEventListener('change', mostraAgregados)
+}
+
+function mostraAgregados(){
+	if (obterLocal() == 'ZZ'){
+		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'ZZ') && (linha.nr_turno == obterTurno())})
+		preencheCard(dadosCard)
+	}
+	else if (obterLocal() == 'PA'){ // TROCAR POR BR
+		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'PA') && (linha.nr_turno == obterTurno())})
+		preencheCard(dadosCard)
+	}
+}
+
+
+
 function mostraHover(event){
+	// desabilitar se ZZ ou BR estiver checado 
+	// TROCAR POR BR
+	if (obterLocal() == 'ZZ' || obterLocal() == 'PA'){
+		return
+	}
 	// 1. get target = id do path
 	let userUf = event.target.id
 	console.log(userUf)
 	// 2. para uf de mapaDados > id (que ta no json) = uf
 	let siglaUf = dadosIbge.filter(function(linha){return linha.id == userUf})[0].sigla
 	//console.log(siglaUf)
-	let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == siglaUf) && (linha.nr_turno == 2)})
+	let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == siglaUf) && (linha.nr_turno == obterTurno())})
 	// no futuro pegar o valor do botao para substituir acima
 	console.log(dadosCard)
 	// 3. agora pega a uf e coloca no hover

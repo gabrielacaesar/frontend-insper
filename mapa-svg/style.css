@@ -4,7 +4,7 @@
 	margin: 0;
 	font-family: 'Outfit', sans-serif;
 	box-sizing: border-box;
-	background-color: black;
+	background-color: rgb(34, 32, 32);
 	color: lightgray;
 }
 
@@ -25,6 +25,7 @@ h2, footer {
 
 a {
     color: #283c6c;
+    font-weight: 900;
 }
 
 footer {
