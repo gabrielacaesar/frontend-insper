@@ -8,7 +8,7 @@ let dadosIbge;
 
 async function loadMapData(){
 	let mapaUrl = 'https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=image/svg+xml&qualidade=intermediaria&intrarregiao=UF';
-	let arquivoTse =`./resultados/election-data-2.json`;
+	let arquivoTse =`./resultados/election-data-3.json`;
 	let urlIbge = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
 	
 	// svg
@@ -70,8 +70,8 @@ function mostraAgregados(){
 		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'ZZ') && (linha.nr_turno == obterTurno())})
 		preencheCard(dadosCard)
 	}
-	else if (obterLocal() == 'PA'){ // TROCAR POR BR
-		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'PA') && (linha.nr_turno == obterTurno())})
+	else if (obterLocal() == 'BR'){ 
+		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'BR') && (linha.nr_turno == obterTurno())})
 		preencheCard(dadosCard)
 	}
 }
@@ -80,10 +80,9 @@ function mostraAgregados(){
 
 function mostraHover(event){
 	// desabilitar se ZZ ou BR estiver checado 
-	// TROCAR POR BR
-	if (obterLocal() == 'ZZ' || obterLocal() == 'PA'){
+	if (obterLocal() == 'ZZ' || obterLocal() == 'BR'){
 		return
-	}
+	}	
 	// 1. get target = id do path
 	let userUf = event.target.id
 	console.log(userUf)
