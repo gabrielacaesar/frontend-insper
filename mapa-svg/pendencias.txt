@@ -1,16 +1,6 @@
 pendencias
 
-add mes por extenso - ok
-add cod ibge direto no json - ok
-add ponto nos dados e vir como string - ok
-
-ano eleicao e nome + partido: estatico - ok
-
-add link twitter, tse, github - ok
-
-map color: perc eleitores
-add hover: nome da UF
-e mostrar dropdown com uf
-
-add botao de 'br' e 'exterior' - ok
-add dados de 'br' e 'exterior' 
+- funcionamento dropdown
+- UF ganha destaque com o hover
+- Mapa colorido de acordo com percentual de eleitores
+- haveria como as fotos nao se mexerem? 
