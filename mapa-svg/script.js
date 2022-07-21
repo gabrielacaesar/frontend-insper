@@ -2,10 +2,7 @@ let mapaMalha;
 let dadosTse;
 let dadosIbge;
 
-// se retorna algo diferente de null, entao colocar dentro da funcao
-// se o value do dropdown for diferente de blank, entao colocar dentro da funcao
-
-
+// mapa svg para exibir na pagina
 async function loadMapData(){
 	let mapaUrl = 'https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=image/svg+xml&qualidade=intermediaria&intrarregiao=UF';
 	let arquivoTse =`./resultados/election-data-3.json`;
@@ -41,9 +38,8 @@ async function loadMapData(){
 }
 loadMapData();
 
-// filtro do round + filtro do local
+// filtro do round - turno
 let userRound = document.querySelectorAll('[name=turno]')
-
 function obterTurno(){
 	for (let round of userRound){
 	if (round.checked) {
@@ -52,6 +48,7 @@ function obterTurno(){
 	}
 }
 
+// filtro do local - BR ou ZZ
 let userLocal = document.querySelectorAll('[name=local]')
 function obterLocal(){
 	for (let local of userLocal){
@@ -76,8 +73,30 @@ function mostraAgregados(){
 	}
 }
 
+// limpar dropdown de UF
+function limparResultado(){
+	// condicao: se um dos select tiver valor 'blank'
+	if (dropdownUF.value == 'blank'){
+		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == 'BR') && (linha.nr_turno == obterTurno())})
+		preencheCard(dadosCard)
+	}
+  }
 
+// dropdown de UF
+let dropdownUF = document.querySelector('#uf-brasil')
+console.log(dropdownUF)
 
+function filtraUF(){
+	if (dropdownUF.value != 'blank'){
+		console.log(dropdownUF.value)
+		let dadosCard = dadosTse.filter(function(linha){return (linha.sg_uf == dropdownUF.value) && (linha.nr_turno == obterTurno())})
+		preencheCard(dadosCard)
+	}else{
+		limparResultado()
+	}
+}
+
+// hover do mapa para exibir no painel
 function mostraHover(event){
 	// desabilitar se ZZ ou BR estiver checado 
 	if (obterLocal() == 'ZZ' || obterLocal() == 'BR'){
