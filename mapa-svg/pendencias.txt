@@ -1,6 +1,4 @@
 pendencias
 
-- funcionamento dropdown
-- UF ganha destaque com o hover
 - Mapa colorido de acordo com percentual de eleitores
 - haveria como as fotos nao se mexerem? 
